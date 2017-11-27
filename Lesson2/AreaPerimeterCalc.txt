@@ -1,0 +1,52 @@
+var $ = function (id) 
+{
+	return document.getElementById(id);
+}
+
+var calculate_click = function ()	
+{
+		var Length = paraFloat ( $ ("Length").value);
+		var Width = paraFloat ( $ ("Width").value);
+
+
+		$("Area").value = "";
+		
+		if (isNaN(Length) || Length <= 0) {
+			alert("Length can't be a letter\n and less than zero\n STUPID!!!!!")
+			
+		}
+		else if (isNaN(Width) || Width <= 0) {
+			alert("Width can't be a letter\n and less than zero\n STUPID!!!!!")
+			
+		}
+		else {
+			
+			var Area = 0;
+		
+		}
+		
+		$("Perimeter").value = "";
+		
+		if (isNaN(Length) || Length <= 0) {
+			alert("Length can't be a letter\n and less than zero\n STUPID!!!!!")
+			
+		}
+		else if (isNaN(Width) || Width <= 0) {
+			alert("Width can't be a letter\n and less than zero\n STUPID!!!!!")
+			
+		}
+		else {
+				
+			var Perimeter = 0;
+		
+		}
+		
+		Area = Length * Width;
+		Perimeter = (2 * Width) + (2 * Length);
+}
+
+window.onload = function () {
+		$("calculate").onclick = calculate_click;
+		$("Length").focus();
+		$("Width").focus();
+}
